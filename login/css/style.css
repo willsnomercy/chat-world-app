@@ -1,0 +1,229 @@
+button:active {
+  transform: translate(-1px, 1.5px);
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .card {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 20px;
+  width: calc(90% - 40px);
+  max-width: 300px;
+  background-color: var(--bs6);
+  border-radius: 20px;
+  -webkit-animation: munculKartu 0.5s;
+          animation: munculKartu 0.5s;
+}
+.container .card .group {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.container .card .group p {
+  color: black;
+}
+.container .card .group select {
+  padding: 3px;
+  background-color: transparent;
+  color: var(--bs1);
+  font-weight: bold;
+  border-top: 2px solid var(--bs1);
+}
+.container .card .group option {
+  font-weight: bold;
+  background-color: var(--bs6);
+}
+.container .card .group option:nth-child(1) {
+  display: none;
+}
+.container .card .group button {
+  position: relative;
+  width: 150px;
+  padding: 5px 0;
+  margin: 5px 0;
+  border-radius: 15px;
+  background-color: var(--bs2);
+}
+.container .card .group button p {
+  color: white;
+}
+.container .card .group button i {
+  color: white;
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+.container .card .group button:hover:nth-child(1) {
+  background-color: var(--c-red);
+  color: white;
+}
+.container .card .group button:hover:nth-child(2) {
+  background-color: var(--c-white);
+  color: black;
+}
+.container .card .group button:hover:nth-child(2) p, .container .card .group button:hover:nth-child(2) i {
+  color: black;
+}
+.container .card .group button:hover:nth-child(3) {
+  background-color: var(--c-blue);
+  color: white;
+}
+.container .card .group button:hover:nth-child(4) {
+  background-color: var(--c-white);
+}
+.container .card .group button:hover:nth-child(4) p, .container .card .group button:hover:nth-child(4) i {
+  color: var(--bs2);
+}
+.container .card input {
+  padding: 5px;
+  margin: 0 3px;
+  background-color: var(--bs4);
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  color: black;
+  text-align: center;
+}
+.container .card .group-flex {
+  display: flex;
+}
+.container .card .group-flex button {
+  padding: 5px 0;
+  width: calc(50% - 6px);
+  margin: 5px 3px;
+  background-color: var(--bs3);
+  border-radius: 5px;
+  color: black;
+}
+.container .card .group-flex button:hover:nth-child(1) {
+  background-color: var(--bs2);
+  color: white;
+}
+.container .card .group-flex button:hover:nth-child(2) {
+  background-color: var(--bs2);
+  color: white;
+}
+.container .card.deleted {
+  -webkit-animation: hapusKartu 0.2s forwards;
+          animation: hapusKartu 0.2s forwards;
+}
+
+@-webkit-keyframes hapusKartu {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+
+@keyframes hapusKartu {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@-webkit-keyframes munculKartu {
+  0% {
+    transform: scale(0);
+  }
+  60% {
+    transform: scale(1.1);
+  }
+  75% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes munculKartu {
+  0% {
+    transform: scale(0);
+  }
+  60% {
+    transform: scale(1.1);
+  }
+  75% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.dark {
+  background-color: var(--bg1);
+}
+.dark .container .card {
+  background-color: var(--bg2);
+}
+.dark .container .card .group select {
+  color: white;
+  border-top: 2px solid var(--c-blue);
+}
+.dark .container .card .group option {
+  background-color: var(--bg2);
+}
+.dark .container .card .group button {
+  background-color: #1b1b1b;
+}
+.dark .container .card .group button p {
+  color: unset;
+}
+.dark .container .card .group button i {
+  color: unset;
+}
+.dark .container .card .group button:hover:nth-child(1) {
+  background-color: var(--c-red);
+  color: white;
+}
+.dark .container .card .group button:hover:nth-child(2) {
+  background-color: var(--c-white);
+  color: black;
+}
+.dark .container .card .group button:hover:nth-child(2) p, .dark .container .card .group button:hover:nth-child(2) i {
+  color: unset;
+}
+.dark .container .card .group button:hover:nth-child(3) {
+  background-color: var(--c-blue);
+  color: white;
+}
+.dark .container .card .group button:hover:nth-child(4) {
+  background-color: var(--c-white);
+  color: black;
+}
+.dark .container .card .group button:hover:nth-child(4) p, .dark .container .card .group button:hover:nth-child(4) i {
+  color: unset;
+}
+.dark .container .card input {
+  background-color: var(--bg1);
+  color: white;
+}
+.dark .container .card .group-flex button {
+  background-color: #1b1b1b;
+  color: var(--c-red);
+}
+.dark .container .card .group-flex button:nth-child(2) {
+  color: var(--c-green);
+}
+.dark .container .card .group-flex button:hover:nth-child(1) {
+  background-color: var(--c-red);
+  color: white;
+}
+.dark .container .card .group-flex button:hover:nth-child(2) {
+  background-color: var(--c-green);
+  color: black;
+}
+.dark .container .card.deleted {
+  -webkit-animation: hapusKartu 0.2s forwards;
+          animation: hapusKartu 0.2s forwards;
+}

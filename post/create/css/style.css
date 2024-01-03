@@ -1,0 +1,139 @@
+.container {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+h1 {
+  position: relative;
+  text-align: center;
+  background-color: var(--bs6);
+  padding-bottom: 7px;
+}
+h1 button {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translate(0, -50%);
+  padding: 0;
+  font-size: 24px;
+  background-color: transparent;
+  color: var(--bs1);
+  cursor: pointer;
+}
+
+.form {
+  position: relative;
+  height: calc(100% - 50px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.form .Post-picture {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.form .Post-picture button#input-picture {
+  background-color: var(--bs3);
+  color: white;
+  width: 100%;
+  padding: 5px 7px 7px 7px;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+.form .Post-picture .picture-preview {
+  display: flex;
+  max-width: 150px;
+  max-height: 150px;
+  background-color: black;
+  margin-bottom: 20px;
+}
+.form .Post-picture .picture-preview img {
+  max-width: 150px;
+  max-height: 150px;
+}
+.form .Post-desc {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: calc(100% - 20px);
+}
+.form .Post-desc textarea {
+  background-color: var(--bs6);
+  border-bottom: 2px solid var(--bs2);
+  color: black;
+  padding: 5px;
+  margin-bottom: 10px;
+  resize: none;
+  width: calc(100% - 10px);
+  max-width: 300px;
+  height: 75px;
+}
+.form .buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 175px;
+}
+.form .buttons button {
+  text-transform: uppercase;
+  font-weight: bold;
+  width: calc(50% - 5px);
+  padding: 3px 0 5px 0;
+  border-radius: 3px;
+}
+.form .buttons button:nth-child(1) {
+  background-color: black;
+  color: white;
+}
+.form .buttons button:nth-child(2) {
+  background-color: var(--bs3);
+  color: white;
+}
+
+.Uploader {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(33, 40, 48, 0.8);
+  color: white;
+}
+.Uploader h1, .Uploader h2 {
+  background-color: transparent;
+}
+
+.dark h1 {
+  background-color: var(--bg2);
+}
+.dark h1 button {
+  color: white;
+}
+.dark .form .Post-picture button#input-picture {
+  background-color: var(--c-blue);
+}
+.dark .form .Post-desc textarea {
+  background-color: transparent;
+  border-bottom: 2px solid var(--c-blue);
+  color: white;
+}
+.dark .form .buttons button:nth-child(1) {
+  background-color: var(--c-red);
+  color: white;
+}
+.dark .form .buttons button:nth-child(2) {
+  background-color: var(--b-green);
+  color: white;
+}
+.dark .Uploader {
+  background-color: rgba(33, 40, 48, 0.8);
+  color: white;
+}
+.dark .Uploader h1, .dark .Uploader h2 {
+  background-color: transparent;
+}
