@@ -30,14 +30,6 @@ import { firebaseConfig } from '../../data/js/config.js';
                     <i class="fa-brands fa-google"></i>
                     <p>Google</p>
                 </button>
-                <button class="c-white" id="github-login">
-                    <i class="fa-brands fa-github"></i>
-                    <p>GitHub</p>
-                </button>
-                <button class="c-blue" id="facebook-login">
-                    <i class="fa-brands fa-facebook-f"></i>
-                    <p>Facebook</p>
-                </button>
                 <button class="c-green" id="email-form">
                     <i class="fa-regular fa-envelope"></i>
                     <p>Email</p>
@@ -53,8 +45,6 @@ import { firebaseConfig } from '../../data/js/config.js';
         }
 
         const google = card.querySelector('#google-login');
-        const github = card.querySelector('#github-login');
-        const facebook = card.querySelector('#facebook-login');
         const emailForm = card.querySelector(`#email-form`);
 
         const visibility = (clicked) => {
@@ -79,21 +69,7 @@ import { firebaseConfig } from '../../data/js/config.js';
             const provider = new GoogleAuthProvider();
             signInWithRedirect(auth, provider);
         }
-        github.onclick = () => {
-            visibility(github);
-            const provider = new GithubAuthProvider();
-            signInWithRedirect(auth, provider);
-        }
-        facebook.onclick = () => {
-            popup.confirm({
-                msg: 'We <b class="c-red">ARE NOT</b> recommending you to login with Facebook since Meta <b class="c-red">DOES NOT</b> care about privacy.<br/>Still want to continue!?',
-                onyes: () => {
-                    const provider = new FacebookAuthProvider();
-                    signInWithRedirect(auth, provider);
-                    visibility(facebook);
-                }
-            })
-        }
+      
 
         emailForm.addEventListener('click', () => transition(card, emailCard));
 
@@ -107,7 +83,7 @@ import { firebaseConfig } from '../../data/js/config.js';
         card.innerHTML = (`
             <h1>${lang.login}</h1>
             <label for="email">Email:</label>
-            <input type="email" name="email" id="email" placeholder="${lang.your_email}.." maxlength="360"/>
+            <input type="email" name="email" id="email" placeholder="${lang.your_email}.." maxlength="360/>
             <div class="group-flex">
                 <button id="back-to-login" class="c-red">${lang.cancel}</button>
                 <button id="email-login" class="c-green">${lang.send}</button>
